@@ -5,15 +5,15 @@ module.exports = {
   devServer: {
     port: 8080,
     proxy: {
-      '/api': {
+      '/': {
         //本地服务接口地址
-        target: 'http://172.16.3.223:3000',
+        target: 'http://127.0.0.1:3003',
         ws: true,
-				autoRewrite: true,
-				changeOrigin: true,
-        pathRewrite: {
-          '^/api': '/'
-        }
+        autoRewrite: true,
+        changeOrigin: true,
+        // pathRewrite: {
+        //   '^/api': '/'
+        // }
       }
     }
   }

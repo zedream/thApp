@@ -1,14 +1,15 @@
 <template>
-  <div>
-	</div>
+<div>
+  123
+</div>
 </template>
 
 <script>
-
 export default {
-  name: 'circles'
+name: "index"
 }
 </script>
 
-<style>
+<style scoped>
+
 </style>

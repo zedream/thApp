@@ -1,6 +1,6 @@
 <template>
   <div>
-		<div id="navbar">
+		<div id="navbar" v-if="!$route.meta.isTab">
 			<div class="nav-left">
 				<div v-if="!$route.meta.isTab" class="back" @click="back">
 					<van-icon name="arrow-left" />
@@ -13,9 +13,9 @@
 				</div>
 			</div>
 		</div>
-		<keep-alive>
-			<router-view v-if="!$route.meta.isTab" />
-		</keep-alive>
+<!--		<keep-alive>-->
+<!--			<router-view v-if="!$route.meta.isTab" />-->
+<!--		</keep-alive>-->
 		<!-- <router-view v-if="!$route.meta.isTab"/> -->
 	</div>
 </template>
@@ -27,7 +27,7 @@ export default {
   name: 'navbar',
   data () {
     return {
-			
+
 		}
   },
 	props: {
@@ -61,9 +61,9 @@ export default {
 		height: 40px;
 		display: flex;
 		align-items: center;
-		color: #b371cb;
-		background: #f7f7f7;
-		border-bottom: 1px solid #e4e1e1;
+		color: #84a8de;
+		background: #F7F8FA;
+		border-bottom: 1px solid #EBEDF0;
 		box-sizing: border-box;
 		.nav-left {
 			flex: 1;

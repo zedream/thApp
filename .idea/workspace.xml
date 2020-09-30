@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:vue-app" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05069427-1773-4e3d-9e00-7de3b15c4061" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vue-app/public/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-app/src/views/home/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-app/src/views/shop/shopWindow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/config.db.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/config.db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-service/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-service/routes/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/public/favicon1.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/axios/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/axios/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/page/index/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/page/index/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/page/index/navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/page/index/navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/page/index/tabbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/page/index/tabbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/router/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/router/page/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/router/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/router/views/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/store/modules/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/store/modules/bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/store/modules/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/styles/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/styles/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/HelloWorld/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/circles/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/universe/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/message/chat.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/message/chat.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/message/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/message/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/self/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/self/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/self/updateAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/self/userInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/self/updateAddress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/self/updateAddress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/src/views/self/updatePhone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/src/views/self/updatePhone.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-app/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-app/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i4okV79gPZ5q41smWDQna2E9nQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05069427-1773-4e3d-9e00-7de3b15c4061" name="Default Changelist" comment="" />
+      <created>1601176368093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601176368093</updated>
+      <workItem from="1601176369146" duration="38459000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1010" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601276363686">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1010" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1601276363686" />
+    <state width="2539" height="404" key="GridCell.Tab.0.bottom" timestamp="1601176967623">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2539" height="404" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1601176967623" />
+    <state width="2539" height="404" key="GridCell.Tab.0.center" timestamp="1601176967623">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2539" height="404" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1601176967623" />
+    <state width="2539" height="404" key="GridCell.Tab.0.left" timestamp="1601176967623">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2539" height="404" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1601176967623" />
+    <state width="2539" height="404" key="GridCell.Tab.0.right" timestamp="1601176967623">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2539" height="404" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1601176967623" />
+    <state x="1083" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601259980525">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1083" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1410@0.0.2560.1410" timestamp="1601259980525" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/vue-app/src/page/login/index.vue</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

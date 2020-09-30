@@ -10,6 +10,7 @@ const bar = {
 		SET_TABBAR: (state, value) => {
 			state.tabbar = value
 		}
+
 	}
 }
 

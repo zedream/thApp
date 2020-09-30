@@ -1,6 +1,21 @@
-import Layout from '@/page/index/'
+import Layout from '@/page/index'
+import Nav from '@/page/index/navbar'
+import Home from '@/views/home/index'
 
 export default [{
+    path: '/home',
+    component: Layout,
+    children: [{
+        path: '/home',
+        name: '首页',
+        meta: {
+            keepAlive: true,
+            isTab: true,
+            isAuth: true
+        },
+        component: Home
+    }]
+}, {
 	path: '/message',
 	component: Layout,
 	children: [{
@@ -11,36 +26,33 @@ export default [{
 			isTab: true,
 			isAuth: true
 		},
-		component: () =>
-			import( /* webpackChunkName: "views" */ '@/views/message/index')
+		component: () => import( /* webpackChunkName: "views" */ '@/views/message/index')
 	}]
   }, {
-	path: '/friend',
+	path: '/shopWindow',
 	component: Layout,
 	children: [{
-		path: '/friend',
-		name: '朋友',
+		path: '/shopWindow',
+		name: '橱窗',
 		meta: {
 			keepAlive: true,
 			isTab: true,
 			isAuth: true
 		},
-		component: () =>
-			import( /* webpackChunkName: "views" */ '@/views/friend/index')
+		component: () => import( /* webpackChunkName: "views" */ '@/views/shop/shopWindow')
 	}]
   }, {
-	path: '/circles',
+	path: '/universe',
 	component: Layout,
 	children: [{
-		path: '/circles',
+		path: '/universe',
 		name: '圈子',
 		meta: {
 			keepAlive: true,
 			isTab: true,
 			isAuth: true
 		},
-		component: () =>
-			import( /* webpackChunkName: "views" */ '@/views/circles/index')
+		component: () => import( /* webpackChunkName: "views" */ '@/views/universe/index')
 	}]
   }, {
 	path: '/self',
@@ -53,8 +65,7 @@ export default [{
 			isTab: true,
 			isAuth: true
 		},
-		component: () =>
-			import( /* webpackChunkName: "views" */ '@/views/self/index')
+		component: () => import( /* webpackChunkName: "views" */ '@/views/self/index')
 	}]
   }, {
     path: '/login',
@@ -108,8 +119,8 @@ export default [{
     }
   }, {
     path: '/',
-    name: '消息',
-		redirect: '/message'
+    name: '首页',
+		redirect: '/home'
   }, {
     path: '*',
     redirect: '/404'

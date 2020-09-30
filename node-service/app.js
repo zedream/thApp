@@ -4,17 +4,14 @@ let path = require('path')
 let cookieParser = require('cookie-parser')
 let logger = require('morgan')
 let Jwt = require('./jwt')
-let globalData = require('./util/globalData')
 let session = require('express-session')
 
 let indexRouter = require('./routes/index')
 let loginRouter = require('./routes/login')
 let usersRouter = require('./routes/users')
-let uploadRouter = require('./routes/upload')
 let chatRouter = require('./routes/chat')
 
 let app = express()
-
 
 app.io = chatRouter.io
 
@@ -47,15 +44,16 @@ app.use(session({
 }))
 
 app.use((req, res, next) => {
-  if (req.url !== '/' && req.url !== '/login' && req.url !== 'upload') {
+  console.log(req.url)
+  if (req.url !== '/' && req.url !== '/login') {
     let token = req.headers['th-auth'].split(' ')[1]
     let jwt = new Jwt(token)
     let result = jwt.verifyToken()
     // 如果考验通过就next，否则就返回登陆信息不正确
     if (result === 'err') {
-        console.log(result)
-        res.status(401).send({msg: '请求未授权，请重新登录'})
-        // res.render('login.html')
+      console.log(result)
+      res.status(401).send({msg: '请求未授权，请重新登录'})
+      // res.render('login.html')
     } else if (result === req.session.account) {
       next()
     } else {
@@ -68,7 +66,6 @@ app.use((req, res, next) => {
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/users', usersRouter)
-app.use('/upload', uploadRouter)
 app.use('/chat', chatRouter)
 
 

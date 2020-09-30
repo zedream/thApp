@@ -1,7 +1,8 @@
 <template>
   <div id="tabbar">
-		<div class="tab" :class="{'active': item.path === active}" v-for="(item, index) in tabbar" @click="pathTo(item.path)" :key="index">
-			<img :src="active === item.path ? item.activeIconPath : item.iconPath" :alt="item.name">
+		<div :class="{'active': item.path === active, 'midTab' : index === 2, 'tab': index !== 2}" v-for="(item, index) in tabbar" @click="pathTo(item.path)" :key="index">
+<!--			<img v-if="type === 'img'" :src="active === item.path ? item.activeIconPath : item.iconPath" :alt="item.name">-->
+      <i :class="active === item.path ? item.activeIcon : item.icon"></i>
 			<div v-text="item.name"></div>
 		</div>
   </div>
@@ -12,28 +13,35 @@ export default {
   name: 'tabbar',
   data () {
     return {
+      type: 'iconfont',
 			tabbar: [{
+        name: '首页',
+        path: '/home',
+        // iconPath: require('@/assets/tabbar/message.svg'),
+        // activeIconPath: require('@/assets/tabbar/message_act.svg'),
+        icon: 'iconfont home',
+        activeIcon: 'iconfont home-act'
+      }, {
 				name: '消息',
 				path: '/message',
-				iconPath: require('@/assets/tabbar/message.svg'),
-				activeIconPath: require('@/assets/tabbar/message_act.svg')
+        icon: 'iconfont msg',
+        activeIcon: 'iconfont msg-act'
 			}, {
-				name: '朋友',
-				path: '/friend',
-				iconPath: require('@/assets/tabbar/friend.svg'),
-				activeIconPath: require('@/assets/tabbar/friend_act.svg')
+				// name: '朋友',
+				path: '/universe',
+        icon: 'iconfont msg',
+        activeIcon: 'iconfont msg-act'
 			}, {
-				name: '圈子',
-				path: '/circles',
-				iconPath: require('@/assets/tabbar/circle.svg'),
-				activeIconPath: require('@/assets/tabbar/circle_act.svg')
+				name: '橱窗',
+				path: '/shopWindow',
+        icon: 'iconfont mall',
+        activeIcon: 'iconfont mall-act'
 			}, {
 				name: '我',
 				path: '/self',
-				iconPath: require('@/assets/tabbar/self.svg'),
-				activeIconPath: require('@/assets/tabbar/self_act.svg')
-			}],
-			a: ''
+        icon: 'iconfont my',
+        activeIcon: 'iconfont my-act'
+			}]
 		}
   },
 	computed: {
@@ -42,7 +50,7 @@ export default {
 				return this.$store.state.bar.tabbar
 			},
 			set () {
-				
+
 			}
 		}
 	},
@@ -55,7 +63,7 @@ export default {
 				this.$router.push({
 					path: path,
 					query: {
-						
+
 					}
 				})
 			}
@@ -65,20 +73,18 @@ export default {
 </script>
 <style lang="scss">
 	// b371cb
-	// 8a8a8a
+	// #84a8de
+  $width: calc(100vw / 5);
 	#tabbar {
 		position: fixed;
 		bottom: 0;
 		height: 50px;
 		width: 100%;
-		background: #f7f7f7;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 12px;
 		color: #8a8a8a;
-		border-top: 1px solid #e4e1e1;
-		box-sizing: border-box;
 		.tab {
 			flex: 1;
 			height: 100%;
@@ -86,6 +92,8 @@ export default {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+      box-sizing: border-box;
+      background: #F2F3F5;
 			img {
 				width: 24px;
 				height: 24px;
@@ -95,9 +103,40 @@ export default {
 				height: 18px;
 				line-height: 18px;
 			}
+      &:nth-child(2) {
+        border-radius: 0 20px 0 0;
+      }
+
+      &:nth-child(4) {
+        border-radius: 20px 0 0 0;
+      }
 		}
+    .midTab {
+      position: relative;
+      width: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #F2F3F5;
+      margin-top: 20px;
+      height: 30px;
+      &:after {
+        content: '\e8c7';
+        position: absolute;
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: #F7F8FA;
+        font-family: 'iconfont';
+        color: #92a8df;
+        font-size: 36px;
+        text-align: center;
+      }
+    }
 		.active {
-			color: #b371cb;
+			color: #84a8de;
 		}
 	}
 </style>

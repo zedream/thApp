@@ -8,10 +8,9 @@
 <script>
 
 export default {
-  name: 'self',
 	data () {
 		return {
-			
+
 		}
 	},
 	computed: {

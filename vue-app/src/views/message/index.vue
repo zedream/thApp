@@ -1,25 +1,30 @@
 <template>
   <div class="container">
-		<van-swipe-cell v-for="(item, index) in data" :key="index">
-			<div class="msg-wrap" @click="toChat">
-				<div class="ava-box">
-					<img :src="item.avatar">
-				</div>
-				<div class="content-box">
-					<div class="content-top">
-						<div class="name" v-text="item.name"></div>
-						<div class="time" v-text="item.time"></div>
-					</div>
-					<div class="content-bottom">
-						<div class="message" v-text="item.message"></div>
-						<div v-if="item.count > 0" class="count" v-text="item.count"></div>
-					</div>
-				</div>
-			</div>
-			<template #right>
-				<van-button square text="删除" type="danger" @click="dele" class="delete-button" />
-			</template>
-		</van-swipe-cell>
+    <van-pull-refresh
+      v-model="pullRefresh"
+      success-text="刷新成功"
+      @refresh="refresh">
+      <van-swipe-cell v-for="(item, index) in data" :key="index">
+        <div class="msg-wrap" @click="toChat">
+          <div class="ava-box">
+            <img :src="item.avatar">
+          </div>
+          <div class="content-box">
+            <div class="content-top">
+              <div class="name" v-text="item.name"></div>
+              <div class="time" v-text="item.time"></div>
+            </div>
+            <div class="content-bottom">
+              <div class="message" v-text="item.message"></div>
+              <div v-if="item.count > 0" class="count" v-text="item.count"></div>
+            </div>
+          </div>
+        </div>
+        <template #right>
+          <van-button square text="删除" type="danger" @click.native="dele" class="delete-button" />
+        </template>
+      </van-swipe-cell>
+    </van-pull-refresh>
 	</div>
 </template>
 
@@ -28,6 +33,7 @@ export default {
   name: 'message',
 	data () {
 		return {
+      pullRefresh: false,
 			data: [{
 				name: '罗丹晨',
 				avatar: require('../../../public/favicon.png'),
@@ -37,16 +43,27 @@ export default {
 			}]
 		}
 	},
-	methods: {
+  watch: {
+    pullRefresh (newVal) {
+      if (newVal) {
+        console.log('watch......刷新列表...',newVal)
+      }
+      setTimeout(() => {
+        this.pullRefresh = false
+      }, 2000)
+    }
+  },
+  methods: {
 		toChat () {
 			this.$router.push({
 				path: '/chat',
 				query: {}
 			})
 		},
-		dele (e) {
-			console.log(e)
-		}
+		dele (e) {},
+    refresh (e) {
+		  console.log(e)
+    }
 	}
 }
 </script>
@@ -54,6 +71,12 @@ export default {
 <style scoped lang="scss">
 	@import "../../styles/common.scss";
 	.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .van-pull-refresh {
+      flex: 1;
+    }
 		.msg-wrap {
 			background: #ffffff;
 			height: 49px;
