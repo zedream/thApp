@@ -41,19 +41,17 @@ export default {
 <style lang="scss">
 .th-button {
   display: inline-block;
-	width: 50px;
-	height: 24px;
 	text-align: center;
 	line-height: 22px;
-	font-size: 14px;
+	font-size: 12px;
 	border-radius: 4px;
   color: #fff;
   background: #00a2f0;
   cursor: pointer;
 	outline: none;
+  padding: 2px 12px;
 }
 .th-btn-default {
-  padding: 4px 8px;
   color: #ffffff;
   background: #e5e5e5;
   color: #6d6d6d;
@@ -72,16 +70,16 @@ export default {
   background: #ae5dcc;
 }
 .th-btn-del {
-  padding: 4px 8px;
   color: #ffffff;
+  border: 1px solid #ff2b3f;
   background: #ff2b3f;
 }
 .del-active {
   background: #ff2c2c;
 }
 .th-btn-add {
-  padding: 4px 8px;
   color: #ffffff;
+  border: 1px solid #12c917;
   background: #12c917;
 }
 .add-active {

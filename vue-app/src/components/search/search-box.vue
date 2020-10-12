@@ -1,12 +1,12 @@
 <template>
-<div>
+<div class="wrap">
 
 </div>
 </template>
 
 <script>
 export default {
-name: "shopWindow"
+  name: "search-box"
 }
 </script>
 

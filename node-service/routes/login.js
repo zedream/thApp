@@ -2,6 +2,7 @@ let express = require('express')
 let router = express.Router()
 let Jwt = require('../jwt')
 let db = require('../db')
+let { domain } = require('../util/globalData')
 
 router.post('/', function(req, res, next) {
   let account = req.body.account
@@ -13,6 +14,7 @@ router.post('/', function(req, res, next) {
         let jwt = new Jwt(account)
         let token = jwt.generateToken()
         req.session.account = account
+        result[0].avatar = `${domain}${result[0].avatar}`
         let data = {
           result: result[0],
           token: token,

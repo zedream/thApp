@@ -1,11 +1,12 @@
 <template>
   <div id="layout">
+    <div class="statusbar" :style="{height: `${sysStatusbar.height}px`, background: $route.meta.statusbarBackground}"></div>
 		<nav-bar v-if="!$route.meta.isTab"></nav-bar>
 		<div id="body">
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"/>
+      <keep-alive v-if="$route.meta.keepAlive">
+        <router-view />
       </keep-alive>
-      <router-view v-if="!$route.meta.keepAlive"/>
+      <router-view v-else />
 		</div>
 		<tab-bar v-if="$route.meta.isTab"></tab-bar>
 	</div>
@@ -14,16 +15,27 @@
 <script>
 import tabBar from './tabbar.vue'
 import navBar from './navbar.vue'
+import { mapState } from 'vuex'
 export default {
 	components: { navBar, tabBar },
   name: 'layout',
   data() {
     return {
+      statusbarHeight: 0
     }
+  },
+  computed: {
+	  ...mapState({
+      sysStatusbar: state => state.bar.sysStatusbar
+    })
   },
   watch: {},
   created() {},
+  mounted() {
+	  console.log(this.sysStatusbar.height)
+  },
   methods: {
+
   }
 }
 </script>

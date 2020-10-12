@@ -13,6 +13,25 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 
+document.oncontextmenu = function() {
+	return false
+}
+
+function plusReady() {
+	// Android处理返回键
+	plus.key.addEventListener('backbutton',function() {
+		plus.nativeUI.toast('THao: 再按一次退出')
+		plus.runtime.quit()
+	}, false)
+	store.commit('INIT_STATUSBAR')
+	console.log(store.state.bar.sysStatusbar.height)
+}
+if (window.plus) {
+	plusReady()
+} else {
+	document.addEventListener('plusready', plusReady, false)
+}
+
 new Vue({
 	router,
 	store,

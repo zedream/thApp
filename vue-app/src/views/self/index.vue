@@ -1,21 +1,22 @@
 <template>
   <div class="container">
-    <div class="userinfo_box" @click="toInfo">
-      <van-image
-        width="80px"
-        height="80px"
-        fit="contain"
-        :src="userInfo.avatar" />
-      <div class="userinfo">
-        <div class="nickname" v-text="userInfo.nickname"></div>
-        <div class="account" v-text="userInfo.account"></div>
+    <div>
+      <div class="userinfo-box" @click="toInfo">
+        <van-image
+          width="72px"
+          height="72px"
+          fit="contain"
+          :src="userInfo.avatar" />
+        <div class="userinfo">
+          <div class="nickname" v-text="userInfo.nickname"></div>
+          <div class="account" v-text="userInfo.account"></div>
+        </div>
       </div>
     </div>
 	</div>
 </template>
 
 <script>
-
 export default {
 	data () {
 		return {
@@ -30,6 +31,8 @@ export default {
 			set () {}
 		}
 	},
+  created() {
+  },
   methods: {
     toInfo () {
       this.$router.push({
@@ -43,13 +46,14 @@ export default {
 <style scoped lang="scss">
 	@import "../../styles/common.scss";
   .container {
-    .userinfo_box {
-      background: #FFFFFF;
-      padding: 12px;
+    .userinfo-box {
+      background: linear-gradient(#63b0ff, #7abbfd);
+      padding: 6px 12px 0 12px;
       display: flex;
-      align-items: center;
-      height: 110px;
+      align-items: flex-end;
+      height: 84px;
       box-sizing: border-box;
+      position: relative;
       /deep/ .van-image {
         border-radius: 8px;
         img {
@@ -65,12 +69,23 @@ export default {
         .nickname {
           font-size: 20px;
           font-weight: 500;
-          color: #323233;
+          color: #ffffff;
         }
         .account {
           font-size: 14px;
-          color: #C8C9CC;
+          color: #f5f5f5;
         }
+      }
+      &:after {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        content: '';
+        top: 84px;
+        left: 0;
+        border-radius: 0 0 50% 50%;
+        background: linear-gradient(#7abbfd, #90c7ff);
       }
     }
   }

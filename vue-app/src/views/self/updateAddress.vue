@@ -1,16 +1,19 @@
 <template>
   <div class="container">
-		<van-cell title="性别" is-link :value="userInfo.nick_name" to="/" />
-		<van-cell title="个性签名" is-link :value="userInfo.account" />
+    <van-button type="primary" text="显示遮罩层" @click="show = true" />
+    <th-mask :show="show" @click.native="show = false">
+      <div>3</div>
+    </th-mask>
 	</div>
 </template>
 
 <script>
-
+import thMask from '@/components/mask/index'
 export default {
+  components: { thMask },
 	data () {
 		return {
-
+      show: false
 		}
 	},
 	computed: {

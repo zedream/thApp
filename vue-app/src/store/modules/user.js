@@ -8,15 +8,26 @@ const user = {
   },
   actions: {
     loginByAccount ({commit}, loginInfo) {
-    // loginByAccount (loginInfo) {
-    return new Promise((resolve, reject) => {
-      axios.post('/login', {
-        account: loginInfo.account,
-        password: loginInfo.password
-      }).then(res => {
-        commit('SET_TOKEN', res.data.token)
-        commit('SET_USERINFO', res.data.result)
-        resolve()
+      return new Promise((resolve, reject) => {
+        axios.post('/login', {
+          account: loginInfo.account,
+          password: loginInfo.password
+        }).then(res => {
+          commit('SET_TOKEN', res.data.token)
+          commit('SET_USERINFO', res.data.result)
+          resolve()
+        })
+        .catch(err => {
+          reject(err)
+        })
+      })
+    },
+    updateUserInfo ({commit}, userInfo) {
+      return new Promise((resolve, reject) => {
+        axios.post('/users/update', {
+          ...userInfo
+        }).then(res => {
+          commit('SET_USERINFO', res.data.result)
         })
         .catch(err => {
           reject(err)

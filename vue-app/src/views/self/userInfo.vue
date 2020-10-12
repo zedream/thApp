@@ -24,6 +24,7 @@
 export default {
 	data () {
 		return {
+		  domain: 'http://th.vaiwan.com/thapp-files/',
       fd: new FormData()
 		}
 	},
@@ -40,15 +41,22 @@ export default {
       for (let key in this.$refs.file.files) {
         this.fd.append('files', this.$refs.file.files[key])
       }
-      this.upload()
+      this.updateAva()
       this.$refs.file.value = ''
       this.fd = new FormData()
     },
-    upload() {
+    updateAva() {
       this.$store.dispatch('upload', this.fd)
         .then((res) => {
           console.log(res)
-          this.thumbnail = this.thumbnail.concat(res.data)
+          this.userInfo.avatar = res.data[0].url
+          this.$store.dispatch('updateUserInfo', {
+            ...this.userInfo,
+            avatar: this.userInfo.avatar.split(this.domain)[1]
+          })
+            .then(res => {
+              console.log(res)
+            })
         })
         .catch(err => {
           console.log(err)

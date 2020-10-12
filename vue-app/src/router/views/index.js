@@ -7,7 +7,9 @@ export default [{
     path: '/chat',
     name: '消息',
     meta: {
-      isTab: false
+      isTab: false,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/message/chat')
@@ -19,7 +21,9 @@ export default [{
     path: '/more',
     name: '更多信息',
     meta: {
-      isTab: false
+      isTab: false,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/index')
@@ -31,10 +35,12 @@ export default [{
     path: '/userInfo',
     name: '个人信息',
     meta: {
-      isTab: false
+      isTab: false,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
-        import( /* webpackChunkName: "views" */ '@/views/self/userInfo')
+      import( /* webpackChunkName: "views" */ '@/views/self/userInfo')
   }]
 }, {
   path: '/updateNickName',
@@ -44,7 +50,9 @@ export default [{
     name: '修改昵称',
     meta: {
       isTab: false,
-      isSave: true
+      isSave: true,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updateNickName')
@@ -57,7 +65,9 @@ export default [{
     name: '修改手机号',
     meta: {
       isTab: false,
-      isSave: true
+      isSave: true,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updatePhone')
@@ -70,7 +80,9 @@ export default [{
     name: '修改地址',
     meta: {
       isTab: false,
-      isSave: true
+      isSave: true,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updateAddress')
@@ -83,7 +95,9 @@ export default [{
     name: '修改性别',
     meta: {
       isTab: false,
-      isSave: true
+      isSave: true,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/updateSex')
@@ -96,7 +110,9 @@ export default [{
     name: '修改个性签名',
     meta: {
       isTab: false,
-      isSave: true
+      isSave: true,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/updateMotto')

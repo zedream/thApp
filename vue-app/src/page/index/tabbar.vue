@@ -47,7 +47,7 @@ export default {
 	computed: {
 		active: {
 			get () {
-				return this.$store.state.bar.tabbar
+				return this.$store.state.bar.tabBar
 			},
 			set () {
 
@@ -59,7 +59,6 @@ export default {
   methods: {
 		pathTo (path) {
 			if (path !== this.active) {
-				this.active = path
 				this.$router.push({
 					path: path,
 					query: {
@@ -130,13 +129,13 @@ export default {
         border-radius: 100%;
         background-color: #F7F8FA;
         font-family: 'iconfont';
-        color: #92a8df;
+        color: #63b0ff;
         font-size: 36px;
         text-align: center;
       }
     }
 		.active {
-			color: #84a8de;
+			color: #63b0ff;
 		}
 	}
 </style>

@@ -4,6 +4,7 @@ import store from '../store/'
 import pageRouter from './page'
 import viewsRouter from './views'
 import { Toast } from 'vant'
+import statusbar from '../util/native'
 
 Vue.use(Router)
 
@@ -33,9 +34,9 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
   // ...
   let meta = to.meta
-	store.commit('SET_TITLE', to.name)
-	store.commit('SET_TABBAR', to.path)
-	
+  store.commit('SET_TITLE', to.name)
+  store.commit('SET_TABBAR', to.path)
+
   if (meta.isAuth === true) {
     if (localStorage.getItem('userinfo')) {
       next()
@@ -44,10 +45,17 @@ router.beforeEach((to, from, next) => {
         path: '/login', // 未登录则跳转至login页面
         // query: {redirect: to.fullPath} // 登陆成功后回到当前页面，这里传值给login页面，to.fullPath为当前点击的页面
       })
-			Toast('请先登录')
+      Toast('请先登录')
     }
   } else {
     next()
+  }
+})
+
+router.afterEach((to, from) => {
+  let meta = to.meta
+  if (window.plus && meta.statusbarStyle) {
+    statusbar.setStatusBar(meta.statusbarStyle)
   }
 })
 

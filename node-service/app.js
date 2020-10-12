@@ -5,11 +5,13 @@ let cookieParser = require('cookie-parser')
 let logger = require('morgan')
 let Jwt = require('./jwt')
 let session = require('express-session')
+let multer = require('multer')
 
 let indexRouter = require('./routes/index')
 let loginRouter = require('./routes/login')
 let usersRouter = require('./routes/users')
 let chatRouter = require('./routes/chat')
+let fileRouter = require('./routes/file')
 
 let app = express()
 
@@ -36,16 +38,18 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(session({
   secret:'hello world', // cookie签名 这个属性是必须的 具体配置和`cookie-parser`一样
   saveUninitialized: true, // 是否自动初始化 默认为true
-  resave:false, // 当用户session无变化的时候依然自动保存
+  resave: false, // 当用户session无变化的时候依然自动保存
   cookie:{ // cookie的信息具体操作和`cookie-parser`一样
     maxAge: 1800000 // 30分钟后过期
   },
   rolling: true// 每次请求的时候覆写cookie
 }))
 
+app.use(multer({dest: '../../thAppFiles', limit: { fileSize: '10mb' }}).array('files', 9))
+
 app.use((req, res, next) => {
   console.log(req.url)
-  if (req.url !== '/' && req.url !== '/login') {
+  if (req.url !== '/' && req.url !== '/login' && req.url !== '/file/upload') {
     let token = req.headers['th-auth'].split(' ')[1]
     let jwt = new Jwt(token)
     let result = jwt.verifyToken()
@@ -67,6 +71,7 @@ app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/users', usersRouter)
 app.use('/chat', chatRouter)
+app.use('/file', fileRouter)
 
 
 // catch 404 and forward to error handler
