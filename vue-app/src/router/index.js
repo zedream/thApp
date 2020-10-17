@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store/'
 import pageRouter from './page'
+import tabBarRouter from './tabBar'
 import viewsRouter from './views'
+import settingRouter from './views/setting'
 import { Toast } from 'vant'
 import statusbar from '../util/native'
 
@@ -27,7 +29,9 @@ let router = new Router({
   },
   routes: [
     ...viewsRouter,
-    ...pageRouter
+    ...pageRouter,
+    ...tabBarRouter,
+    ...settingRouter
   ]
 })
 

@@ -48,7 +48,7 @@ export default {
         'http://th.vaiwan.com/files/img-14a109983e7523905437a4e50972ee56.jpg',
         'http://th.vaiwan.com/files/img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg',
         'http://th.vaiwan.com/files/love.png',
-        'http://th.vaiwan.com/files/login-bg.jpg',
+        'http://th.vaiwan.com/files/login_bg.jpg',
         'http://th.vaiwan.com/files/img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg',
         'http://th.vaiwan.com/files/img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg']
     }

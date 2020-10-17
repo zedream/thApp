@@ -6,13 +6,19 @@
           width="72px"
           height="72px"
           fit="contain"
-          :src="userInfo.avatar" />
+          :src="userInfo.avatar || require('@/static/img/default_ava.png')" />
         <div class="userinfo">
           <div class="nickname" v-text="userInfo.nickname"></div>
           <div class="account" v-text="userInfo.account"></div>
         </div>
       </div>
     </div>
+    <van-cell style="margin-top: 40px" is-link to="/setting">
+      <template #title>
+        <i class="iconfont setting"></i>
+        <span class="custom-title">设置</span>
+      </template>
+    </van-cell>
 	</div>
 </template>
 
@@ -87,6 +93,9 @@ export default {
         border-radius: 0 0 50% 50%;
         background: linear-gradient(#7abbfd, #90c7ff);
       }
+    }
+    .setting {
+      margin-right: 12px;
     }
   }
 </style>

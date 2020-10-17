@@ -9,4 +9,5 @@ module.exports = {
 	// 		style: true
 	// 	}, 'vant']
 	// ]
+    plugins: ['@babel/plugin-proposal-class-properties']
 }

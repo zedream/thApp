@@ -45,7 +45,7 @@ export default {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
 	#body {
     flex: 1;
 		background: #F7F8FA;

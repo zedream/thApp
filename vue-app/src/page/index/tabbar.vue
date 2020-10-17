@@ -109,6 +109,9 @@ export default {
       &:nth-child(4) {
         border-radius: 20px 0 0 0;
       }
+      &:active {
+        background: #EBEDF0;
+      }
 		}
     .midTab {
       position: relative;

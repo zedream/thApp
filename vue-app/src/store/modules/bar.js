@@ -18,8 +18,8 @@ const bar = {
 		SET_TABBAR: (state, value) => {
 			state.tabBar = value
 		},
-		INIT_STATUSBAR: (state) => {
-			plus.navigator.setStatusBarStyle('dark')
+		INIT_STATUSBAR: (state, value) => {
+			plus.navigator.setStatusBarStyle(value)
 			state.sysStatusbar = {
 				color: plus.navigator.getStatusBarStyle(),
 				height: plus.navigator.getStatusbarHeight()

@@ -50,7 +50,6 @@ export default [{
     name: '修改昵称',
     meta: {
       isTab: false,
-      isSave: true,
       statusbarBackground: '#63b0ff',
       statusbarStyle: 'light'
     },
@@ -65,7 +64,6 @@ export default [{
     name: '修改手机号',
     meta: {
       isTab: false,
-      isSave: true,
       statusbarBackground: '#63b0ff',
       statusbarStyle: 'light'
     },
@@ -80,7 +78,6 @@ export default [{
     name: '修改地址',
     meta: {
       isTab: false,
-      isSave: true,
       statusbarBackground: '#63b0ff',
       statusbarStyle: 'light'
     },
@@ -95,7 +92,6 @@ export default [{
     name: '修改性别',
     meta: {
       isTab: false,
-      isSave: true,
       statusbarBackground: '#63b0ff',
       statusbarStyle: 'light'
     },
@@ -110,11 +106,24 @@ export default [{
     name: '修改个性签名',
     meta: {
       isTab: false,
-      isSave: true,
       statusbarBackground: '#63b0ff',
       statusbarStyle: 'light'
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/updateMotto')
+  }]
+}, {
+  path: '/test',
+  component: Layout,
+  children: [{
+    path: '/test',
+    name: '测试',
+    meta: {
+      isTab: false,
+      statusbarBackground: '#63b0ff',
+      statusbarStyle: 'light'
+    },
+    component: () =>
+        import( /* webpackChunkName: "views" */ '@/views/self/test')
   }]
 }]

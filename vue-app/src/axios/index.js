@@ -3,6 +3,8 @@ import router from '@/router'
 import { getToken } from '@/util/session'
 import { Toast } from 'vant'
 
+const Domain = 'http://th.vaiwan.com/thapp-files/'
+
 axios.defaults.timeout = 5000
 axios.defaults.validateStatus = function (status) {
   return status >= 200 && status <= 500
@@ -15,9 +17,12 @@ axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '' : 'http://t
 
 // http request拦截
 axios.interceptors.request.use(config => {
+  if (config.url === '/users/update') {
+    config.data.avatar = config.data.avatar.split(Domain)[1]
+  }
   if (getToken()) {
     config.headers['TH-Auth'] = `th ${getToken()}`
-}
+  }
   return config
 }, error => {
   return Promise.reject(error)

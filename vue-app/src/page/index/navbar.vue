@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar">
+  <div id="navbar" :style="{background: $route.meta.statusbarBackground, color: $route.meta.statusbarStyle === 'light' ? '#ffffff' : '#63b0ff'}">
     <div class="nav-left">
       <div v-if="!$route.meta.isTab" class="back" @click="back">
         <van-icon name="arrow-left" />
@@ -7,9 +7,7 @@
     </div>
     <div class="nav-title" v-text="title"></div>
     <div class="nav-right">
-      <div v-if="$route.meta.isSave"  class="save">
-        <th-button @click.native="save" type="save" :disable="disable">保 存</th-button>
-      </div>
+
     </div>
   </div>
 </template>
@@ -18,18 +16,11 @@
 import ThButton from '@/components/common/th-button'
 export default {
 	components: { ThButton },
-  name: 'navbar',
   data () {
     return {
       show: false
 		}
   },
-	props: {
-		disable: {
-			type: Boolean,
-			default: false
-		}
-	},
   watch: {},
 	computed: {
 		title () {
@@ -39,11 +30,6 @@ export default {
 	created() {},
   mounted() {},
   methods: {
-		save (ee) {
-			if (!this.disable) {
-				console.log(ee)
-			}
-		},
 		back () {
 			window.history.go(-1)
 		}
@@ -56,8 +42,6 @@ export default {
 		height: 40px;
 		display: flex;
 		align-items: center;
-		color: #ffffff;
-		background: #63b0ff;
 		box-sizing: border-box;
 		.nav-left {
 			flex: 1;

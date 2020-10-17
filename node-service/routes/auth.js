@@ -21,15 +21,15 @@ router.post('/', function(req, res, next) {
           msg: '登录成功'
         }
         res.send(data)
-      } else {
+      } else { // 账密不匹配
         let data = {
           msg: '账号或者密码错误'
         }
         res.status(400).send(data)
       }
-    } else {
+    } else { // 账号不存在
       let data = {
-        msg: '该账号不存在'
+        msg: '账号或者密码错误'
       }
       res.status(400).send(data)
     }

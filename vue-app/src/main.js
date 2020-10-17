@@ -16,15 +16,18 @@ Vue.config.productionTip = false
 document.oncontextmenu = function() {
 	return false
 }
-
+console.log(router)
 function plusReady() {
 	// Android处理返回键
-	plus.key.addEventListener('backbutton',function() {
-		plus.nativeUI.toast('THao: 再按一次退出')
+	plus.key.addEventListener('backbutton', function() {
+		plus.nativeUI.toast('再按一次退出')
 		plus.runtime.quit()
 	}, false)
-	store.commit('INIT_STATUSBAR')
-	console.log(store.state.bar.sysStatusbar.height)
+	if (window.location.hash.search('/login')) {
+		store.commit('INIT_STATUSBAR', 'light')
+	} else {
+		store.commit('INIT_STATUSBAR', 'dark')
+	}
 }
 if (window.plus) {
 	plusReady()
