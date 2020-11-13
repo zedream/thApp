@@ -8,7 +8,8 @@ export default [{
     meta: {
         keepAlive: false,
         isAuth: false,
-        statusbarStyle: 'light'
+        statusbarStyle: 'light',
+        depth: 0
     }
 }, {
     path: '/register',
@@ -22,7 +23,8 @@ export default [{
             keepAlive: false,
             isAuth: false,
             statusbarBackground: '#ffffff',
-            statusbarStyle: 'dark'
+            statusbarStyle: 'dark',
+            depth: 0
         }
     }]
 }, {
@@ -34,7 +36,8 @@ export default [{
         keepAlive: false,
         isAuth: false,
         statusbarBackground: '#ffffff',
-        statusbarStyle: 'dark'
+        statusbarStyle: 'dark',
+        depth: 0
     }
 }, {
     path: '/404',
@@ -43,7 +46,8 @@ export default [{
     name: '404',
     meta: {
         keepAlive: true,
-        isAuth: false
+        isAuth: false,
+        depth: 0
     }
 }, {
     path: '/401',
@@ -52,7 +56,8 @@ export default [{
     name: '401',
     meta: {
         keepAlive: true,
-        isAuth: false
+        isAuth: false,
+        depth: 0
     }
 }, {
     path: '/403',
@@ -61,7 +66,8 @@ export default [{
     name: '403',
     meta: {
         keepAlive: true,
-        isAuth: false
+        isAuth: false,
+        depth: 0
     }
 }, {
     path: '/500',
@@ -70,7 +76,8 @@ export default [{
     name: '500',
     meta: {
         keepAlive: true,
-        isAuth: false
+        isAuth: false,
+        depth: 0
     }
 }, {
     path: '/',

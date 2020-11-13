@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50731
 File Encoding         : 65001
 
-Date: 2020-10-12 15:39:39
+Date: 2020-11-13 13:55:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -69,14 +69,19 @@ CREATE TABLE `files` (
 -- ----------------------------
 -- Records of files
 -- ----------------------------
+INSERT INTO `files` VALUES ('01fa5421-137b-11eb-8646-2505ea6458f8', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '721509', 'jpg', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '1314520', '2020-10-21 16:54:20');
 INSERT INTO `files` VALUES ('0900a951-0aec-11eb-b98e-6b3709d8a6f0', '1592554933838.jpeg', '60539', 'jpeg', '1592554933838.jpeg', '1314520', '2020-10-10 19:30:44');
-INSERT INTO `files` VALUES ('58f81ab0-0ae7-11eb-aa11-f126b682fc52', 'kpi_qq.jpg', '55194', 'jpg', 'kpi_qq.jpg', '1314520', '2020-10-10 18:57:11');
-INSERT INTO `files` VALUES ('5f1eacd1-0ae0-11eb-b304-a921e0719f17', 'kpi_qq.jpg', '55194', 'jpg', 'kpi_qq.jpg', '1314520', '2020-10-10 18:07:14');
-INSERT INTO `files` VALUES ('66985ff1-0ae6-11eb-810b-85b473991f72', 'kpi_btn.png', '3006', 'png', 'kpi_btn.png', '1314520', '2020-10-10 18:50:24');
-INSERT INTO `files` VALUES ('a9e125c1-0ae7-11eb-b85f-1f3caf56da69', 'triangle-bottom.png', '161', 'png', 'triangle-bottom.png', '1314520', '2020-10-10 18:59:26');
-INSERT INTO `files` VALUES ('b08c9091-0ae6-11eb-810b-85b473991f72', 'ic_share.png', '572', 'png', 'ic_share.png', '1314520', '2020-10-10 18:52:28');
-INSERT INTO `files` VALUES ('b9c03771-0ae6-11eb-810b-85b473991f72', 'enterIcon.png', '288', 'png', 'enterIcon.png', '1314520', '2020-10-10 18:52:44');
-INSERT INTO `files` VALUES ('e7c1c441-0aeb-11eb-b98e-6b3709d8a6f0', 'IMG_20190130_011601.jpg', '2821787', 'jpg', 'IMG_20190130_011601.jpg', '1314520', '2020-10-10 19:29:48');
+INSERT INTO `files` VALUES ('0af5e5f1-1379-11eb-8646-2505ea6458f8', '1587516659754.jpeg', '133594', 'jpeg', '1587516659754.jpeg', '1314520', '2020-10-21 16:40:16');
+INSERT INTO `files` VALUES ('0ece11a1-142a-11eb-8646-2505ea6458f8', '1592554916276.jpeg', '79279', 'jpeg', '1592554916276.jpeg', '1314520', '2020-10-22 13:47:23');
+INSERT INTO `files` VALUES ('2215e451-137a-11eb-8646-2505ea6458f8', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '721509', 'jpg', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '1314520', '2020-10-21 16:48:04');
+INSERT INTO `files` VALUES ('57779341-18df-11eb-9ac4-a138d2291101', 'img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg', '197226', 'jpg', 'img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg', 'undefined', '2020-10-28 13:35:08');
+INSERT INTO `files` VALUES ('5c40db21-18df-11eb-9ac4-a138d2291101', 'img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg', '197226', 'jpg', 'img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg', '1314520', '2020-10-28 13:35:16');
+INSERT INTO `files` VALUES ('5f820861-1379-11eb-8646-2505ea6458f8', '-62942aefcc64176e.jpg', '229019', 'jpg', '-62942aefcc64176e.jpg', '1314520', '2020-10-21 16:42:37');
+INSERT INTO `files` VALUES ('c88bb8f1-137a-11eb-8646-2505ea6458f8', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '721509', 'jpg', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '1314520', '2020-10-21 16:52:43');
+INSERT INTO `files` VALUES ('c8ee62b1-1056-11eb-9a76-570b1bc42e36', '-60c2f7066150942e.jpg', '60233', 'jpg', '-60c2f7066150942e.jpg', 'th', '2020-10-17 16:57:28');
+INSERT INTO `files` VALUES ('d07a4c01-1061-11eb-8646-2505ea6458f8', '-5ff03517d692aba9.gif', '4296', 'gif', '-5ff03517d692aba9.gif', '1314520', '2020-10-17 18:16:26');
+INSERT INTO `files` VALUES ('d5709d71-1379-11eb-8646-2505ea6458f8', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '721509', 'jpg', 'img-916bc457b0be4fe2c7105b3e0ce5242b_mh1598520817994.jpg', '1314520', '2020-10-21 16:45:55');
+INSERT INTO `files` VALUES ('f1d5bfe1-1379-11eb-8646-2505ea6458f8', '-62942aefcc64176e.jpg', '229019', 'jpg', '-62942aefcc64176e.jpg', '1314520', '2020-10-21 16:46:43');
 
 -- ----------------------------
 -- Table structure for likes
@@ -105,10 +110,13 @@ CREATE TABLE `user` (
   `age` int(3) DEFAULT NULL,
   `gender` tinyint(1) unsigned DEFAULT '0' COMMENT '0：位置 1：男 2：女',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '1314520', '111111', 'th', 'th', '1592554933838.jpeg', '18', '1');
+INSERT INTO `user` VALUES ('1', '1314520', '111111', 'th', 'thao', 'img-df1a35f0e2c6f5a57fbac81eace39fa4.jpg', '18', '1');
 INSERT INTO `user` VALUES ('2', 'test', '1', 'test', 'test', null, null, '0');
+INSERT INTO `user` VALUES ('7', 'test1', '1', null, 'test1', null, null, '0');
+INSERT INTO `user` VALUES ('8', 'th', '1', 'null', 'th', '-60c2f7066150942e.jpg', null, '0');
+INSERT INTO `user` VALUES ('9', 'thao', '1', null, 'thao', null, null, '0');

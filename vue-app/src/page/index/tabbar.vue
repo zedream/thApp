@@ -29,8 +29,8 @@ export default {
 			}, {
 				// name: '朋友',
 				path: '/universe',
-        icon: 'iconfont msg',
-        activeIcon: 'iconfont msg-act'
+        // icon: 'iconfont msg',
+        // activeIcon: 'iconfont msg-act'
 			}, {
 				name: '橱窗',
 				path: '/shopWindow',
@@ -59,7 +59,7 @@ export default {
   methods: {
 		pathTo (path) {
 			if (path !== this.active) {
-				this.$router.push({
+				this.$router.replace({
 					path: path,
 					query: {
 
@@ -121,8 +121,8 @@ export default {
       align-items: center;
       justify-content: center;
       background-color: #F2F3F5;
-      margin-top: 20px;
-      height: 30px;
+      margin-top: 10px;
+      height: 40px;
       &:after {
         content: '\e8c7';
         position: absolute;
@@ -133,7 +133,8 @@ export default {
         background-color: #F7F8FA;
         font-family: 'iconfont';
         color: #63b0ff;
-        font-size: 36px;
+        font-size: 40px;
+        line-height: 48px;
         text-align: center;
       }
     }

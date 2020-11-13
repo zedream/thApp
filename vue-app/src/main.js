@@ -17,11 +17,13 @@ document.oncontextmenu = function() {
 	return false
 }
 console.log(router)
+
 function plusReady() {
 	// Android处理返回键
 	plus.key.addEventListener('backbutton', function() {
-		plus.nativeUI.toast('再按一次退出')
-		plus.runtime.quit()
+		// plus.nativeUI.toast('再按一次退出')
+		// plus.runtime.quit()
+		router.go(-1)
 	}, false)
 	if (window.location.hash.search('/login')) {
 		store.commit('INIT_STATUSBAR', 'light')
@@ -39,5 +41,8 @@ new Vue({
 	router,
 	store,
 	axios,
-  render: h => h(App),
+  	render: h => h(App),
+	// mounted() {
+	// 	document.dispatchEvent(new Event('render-event'))
+	// }
 }).$mount('#app')

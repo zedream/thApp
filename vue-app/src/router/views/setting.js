@@ -9,7 +9,8 @@ export default [{
         meta: {
             isTab: false,
             statusbarBackground: '#63b0ff',
-            statusbarStyle: 'light'
+            statusbarStyle: 'light',
+            depth: 2
         },
         component: () =>
             import( /* webpackChunkName: "views" */ '@/views/setting/index')

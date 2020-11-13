@@ -11,7 +11,7 @@ import statusbar from '../util/native'
 Vue.use(Router)
 
 let router = new Router({
-  // mode: 'history',
+  mode: 'hash',
   scrollBehavior (to, from, savedPosition) {
     // savedPosition 这个参数当且仅当导航 (通过浏览器的 前进/后退 按钮触发) 时才可用  效果和 router.go() 或 router.back()
     if (savedPosition) {
@@ -36,6 +36,22 @@ let router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  // console.log(router.history.current.meta.isTab)
+  function plusReady() {
+    // Android处理返回键
+    plus.key.addEventListener('backbutton', function() {
+      if (from.meta.isTab) {
+        plus.runtime.quit()
+      }
+      // plus.nativeUI.toast('再按一次退出')
+      // plus.runtime.quit()
+    }, false)
+  }
+  // if (window.plus) {
+  //   plusReady()
+  // } else {
+  //   document.addEventListener('plusready', plusReady, false)
+  // }
   // ...
   let meta = to.meta
   store.commit('SET_TITLE', to.name)

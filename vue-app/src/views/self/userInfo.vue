@@ -46,11 +46,10 @@ export default {
     },
     updateAva() {
       this.$store.dispatch('upload', this.fd).then((res) => {
-        console.log(res)
         this.userInfo.avatar = res.data[0].url
+        console.log(this.userInfo)
         this.$store.dispatch('updateUserInfo', {
-          ...this.userInfo,
-          avatar: this.userInfo.avatar.split(this.domain)[1]
+          ...this.userInfo
         })
         .then(res => {
           console.log(res)

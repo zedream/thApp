@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
   <div class="row-center mg-top-8" @click="logout">注销登录</div>
   <div class="row-center mg-top-8" @click="quit">退出</div>
 </div>

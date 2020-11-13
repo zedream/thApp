@@ -27,7 +27,7 @@ router.post('/upload', function (req, res, next) {
                         size: item.size,
                         id: uuid.v1()
                     })
-                    db.query(`insert into files (id, name, type, size, path, account, create_time) values ('${uuid.v1()}', '${item.originalname}', '${item.originalname.split('.')[1]}', ${item.size}, '${item.originalname}', ${req.session.account}, '${util.formatDate(new Date())}')`, [], (result, fields) => {
+                    db.query(`insert into files (id, name, type, size, path, account, create_time) values ('${uuid.v1()}', '${item.originalname}', '${item.originalname.split('.')[1]}', ${item.size}, '${item.originalname}', '${req.session.account}', '${util.formatDate(new Date())}')`, [], (result, fields) => {
                         console.log(result)
                     })
                     if (imgRes.length === req.files.length) {

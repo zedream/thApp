@@ -9,7 +9,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 2
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/message/chat')
@@ -23,7 +24,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 3
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/index')
@@ -37,7 +39,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 2
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/userInfo')
@@ -51,7 +54,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 3
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updateNickName')
@@ -65,7 +69,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 3
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updatePhone')
@@ -79,7 +84,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 3
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/updateAddress')
@@ -93,7 +99,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 4
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/updateSex')
@@ -107,7 +114,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 4
     },
     component: () =>
       import( /* webpackChunkName: "views" */ '@/views/self/more/updateMotto')
@@ -121,7 +129,8 @@ export default [{
     meta: {
       isTab: false,
       statusbarBackground: '#63b0ff',
-      statusbarStyle: 'light'
+      statusbarStyle: 'light',
+      depth: 3
     },
     component: () =>
         import( /* webpackChunkName: "views" */ '@/views/self/test')

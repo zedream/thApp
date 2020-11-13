@@ -1,35 +1,92 @@
 <template>
 <div class="container">
   <div class="head">
+    这是一个首页header
     <search></search>
   </div>
   <div class="content">
-    <van-skeleton title avatar :row="3" :loading="loading">
-      <scroll>
+    <scroll>
+      <van-skeleton title avatar :row="3" :loading="loading">
         <div class="slot-box">
           <div class="wrapping">
             <div class="info">
               <img class="ava" src="http://th.vaiwan.com/files/1592554916276.jpeg">
               <div class="nick-time">
-                <div class="nickname">发生的广泛地</div>
+                <div class="nickname">thao</div>
                 <div class="time">12:45</div>
               </div>
             </div>
             <div class="text">
-              都是发顺丰的
-              刚发的
+              股份或者发
+              广东发货今天又
+              回复下功夫
+              规范
             </div>
             <div class="images">
               <sudoku :images="images"></sudoku>
             </div>
           </div>
         </div>
-      </scroll>
-    </van-skeleton>
-    <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
-    <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
-    <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
-    <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+        <div class="slot-box">
+          <div class="wrapping">
+            <div class="info">
+              <img class="ava" src="http://th.vaiwan.com/files/1592554916276.jpeg">
+              <div class="nick-time">
+                <div class="nickname">梵蒂冈</div>
+                <div class="time">17:34</div>
+              </div>
+            </div>
+            <div class="text">
+            </div>
+            <div class="images">
+              <sudoku :images="images"></sudoku>
+            </div>
+          </div>
+        </div>
+        <div class="slot-box">
+          <div class="wrapping">
+            <div class="info">
+              <img class="ava" src="http://th.vaiwan.com/files/1592554916276.jpeg">
+              <div class="nick-time">
+                <div class="nickname">清热</div>
+                <div class="time">02:15</div>
+              </div>
+            </div>
+            <div class="text">
+              法式蛋糕
+              给对方韩国规范化个
+            </div>
+            <div class="images">
+              <sudoku :images="images"></sudoku>
+            </div>
+          </div>
+        </div>
+        <div class="slot-box">
+          <div class="wrapping">
+            <div class="info">
+              <img class="ava" src="http://th.vaiwan.com/files/1592554916276.jpeg">
+              <div class="nick-time">
+                <div class="nickname">刚刚放假太阳</div>
+                <div class="time">23:03</div>
+              </div>
+            </div>
+            <div class="text">
+              广东省广泛的个梵蒂冈
+              刚发的刚发的
+              大锅饭
+            </div>
+            <div class="images">
+              <sudoku :images="images"></sudoku>
+            </div>
+          </div>
+        </div>
+      </van-skeleton>
+      <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+      <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+      <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+      <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+      <van-skeleton title avatar :row="3" :loading="loading"></van-skeleton>
+    </scroll>
   </div>
 </div>
 </template>
@@ -56,7 +113,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false
-    },1000)
+    },3000)
   },
   methods: {
     refresh (e) {
@@ -72,6 +129,10 @@ export default {
   .head {
     height: 40px;
     background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    justify-content: space-between;
   }
   .content {
     height: calc(100vh - 90px);

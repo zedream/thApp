@@ -6,14 +6,29 @@ let logger = require('morgan')
 let Jwt = require('./jwt')
 let session = require('express-session')
 let multer = require('multer')
+// let history = require('connect-history-api-fallback')
 
 let indexRouter = require('./routes/index')
-let loginRouter = require('./routes/login')
+let authRouter = require('./routes/auth')
 let usersRouter = require('./routes/users')
 let chatRouter = require('./routes/chat')
 let fileRouter = require('./routes/file')
 
 let app = express()
+
+// app.use(history({
+//   disableDotRule: true,
+//   verbose: true,
+//   rewrites: [
+//     {
+//       from: /^\//,
+//       to: function(content) {
+//         console.log('content', content.parsedUrl)
+//         return '/home'
+//       }
+//     }
+//   ]
+// }))
 
 app.io = chatRouter.io
 
@@ -48,8 +63,7 @@ app.use(session({
 app.use(multer({dest: '../../thAppFiles', limit: { fileSize: '10mb' }}).array('files', 9))
 
 app.use((req, res, next) => {
-  console.log(req.url)
-  if (req.url !== '/' && req.url !== '/login' && req.url !== '/file/upload') {
+  if (req.url !== '/' && req.url !== '/auth/login' && req.url !== '/auth/register' && req.url !== '/file/upload') {
     let token = req.headers['th-auth'].split(' ')[1]
     let jwt = new Jwt(token)
     let result = jwt.verifyToken()
@@ -68,24 +82,23 @@ app.use((req, res, next) => {
   }
 })
 app.use('/', indexRouter)
-app.use('/login', loginRouter)
+app.use('/auth', authRouter)
 app.use('/users', usersRouter)
 app.use('/chat', chatRouter)
 app.use('/file', fileRouter)
 
-
-// catch 404 and forward to error handler
+// catch 404 and forward to page handler
 app.use(function(req, res, next) {
   next(createError(404))
 });
 
-// error handler
+// page handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
+  // set locals, only providing page in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
-  // render the error page
+  // render the page tabBar
   res.status(err.status || 500)
   res.render('error')
 })

@@ -10,7 +10,7 @@ axios.defaults.validateStatus = function (status) {
   return status >= 200 && status <= 500
 }
 
-axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '' : 'http://thApp.vaiwan.com'
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/api' : 'http://thApp.vaiwan.com'
 
 // 跨域请求，允许保存cookie
 // axios.defaults.withCredentials = true

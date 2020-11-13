@@ -8,72 +8,77 @@ export default [{
     path: '/home',
     name: '首页',
     meta: {
-      keepAlive: true,
-      isTab: true,
-      isAuth: true,
-      statusbarBackground: '#ffffff',
-      statusbarStyle: 'dark'
+        keepAlive: true,
+        isTab: true,
+        isAuth: true,
+        statusbarBackground: '#ffffff',
+        statusbarStyle: 'dark',
+        depth: 1
     },
     component: Home
     }]
   }, {
 	path: '/message',
 	component: Layout,
-	  children: [{
-      path: '/message',
-      name: '消息',
-      meta: {
-        keepAlive: true,
-        isTab: true,
-        isAuth: true,
-        statusbarBackground: '#ffffff',
-        statusbarStyle: 'dark'
-      },
-      component: () => import( /* webpackChunkName: "views" */ '@/views/message/index')
+    children: [{
+        path: '/message',
+        name: '消息',
+        meta: {
+            keepAlive: true,
+            isTab: true,
+            isAuth: true,
+            statusbarBackground: '#ffffff',
+            statusbarStyle: 'dark',
+            depth: 1.1
+        },
+        component: () => import( /* webpackChunkName: "views" */ '@/views/message/index')
 	}]
   }, {
 	path: '/shopWindow',
 	component: Layout,
 	children: [{
-      path: '/shopWindow',
-      name: '橱窗',
-      meta: {
-        keepAlive: true,
-        isTab: true,
-        isAuth: true,
-        statusbarBackground: '#ffffff',
-        statusbarStyle: 'dark'
-		},
+        path: '/shopWindow',
+        name: '橱窗',
+        meta: {
+            keepAlive: true,
+            isTab: true,
+            isAuth: true,
+            statusbarBackground: '#ffffff',
+            statusbarStyle: 'dark',
+            depth: 1.3
+        },
       component: () => import( /* webpackChunkName: "views" */ '@/views/shop/shopWindow')
 	}]
   }, {
 	path: '/universe',
 	component: Layout,
 	children: [{
-      path: '/universe',
-      name: '圈子',
-      meta: {
-        keepAlive: true,
-        isTab: true,
-        isAuth: true,
-        statusbarBackground: '#ffffff',
-        statusbarStyle: 'dark'
-		},
-      component: () => import( /* webpackChunkName: "views" */ '@/views/universe/index')
+        path: '/universe',
+        name: '圈子',
+        meta: {
+            keepAlive: true,
+            isTab: true,
+            isAuth: true,
+            statusbarBackground: '#ffffff',
+            statusbarStyle: 'dark',
+            depth: 1.2
+        },
+        component: () => import( /* webpackChunkName: "views" */ '@/views/universe/index')
 	}]
   }, {
 	path: '/self',
 	component: Layout,
 	children: [{
-      path: '/self',
-      name: '我',
-      meta: {
-        keepAlive: true,
-        isTab: true,
-        isAuth: true,
-        statusbarBackground: '#63b0ff',
-        statusbarStyle: 'light'
-      },
-      component: () => import( /* webpackChunkName: "views" */ '@/views/self/index')
+        path: '/self',
+        name: '我',
+        meta: {
+            keepAlive: true,
+            isTab: true,
+            isAuth: true,
+            statusbarBackground: '#63b0ff',
+            statusbarStyle: 'light',
+            depth: 1.4
+        },
+        component: () => import( /* webpackChunkName: "views" */ '@/views/self/index')
 	}]
   }]
